@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:grab_clone/constant.dart';
+import 'package:grab_clone/screens/bottom_navigation/activity_screen.dart';
 import 'package:grab_clone/screens/bottom_navigation/home_screen.dart';
 import 'package:grab_clone/widgets/grab_bottom_navigation_item.dart';
 
@@ -17,9 +18,7 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    SafeArea(
-      child: Text("Activity"),
-    ),
+    ActivityScreen(),
     SafeArea(
       child: Text("Payment"),
     ),
@@ -84,7 +83,7 @@ class _MainScreenState extends State<MainScreen> {
                 Expanded(
                   child: GrabBottomNavigationItem(
                     icon: FontAwesomeIcons.receipt,
-                    title: "Acivity",
+                    title: "Activity",
                     onTap: () {
                       _selectedIndex = 1;
                       setState(() {});
