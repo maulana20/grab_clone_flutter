@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:grab_clone/constant.dart';
 import 'package:grab_clone/screens/bottom_navigation/activity_screen.dart';
 import 'package:grab_clone/screens/bottom_navigation/home_screen.dart';
+import 'package:grab_clone/screens/bottom_navigation/payment_screen.dart';
 import 'package:grab_clone/widgets/grab_bottom_navigation_item.dart';
 
 class MainScreen extends StatefulWidget {
@@ -19,9 +20,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     ActivityScreen(),
-    SafeArea(
-      child: Text("Payment"),
-    ),
+    PaymentScreen(),
     SafeArea(
       child: Text("Inbox"),
     ),

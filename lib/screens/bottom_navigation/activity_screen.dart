@@ -103,7 +103,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
               ),
             ),
             Container(
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height - 230,
               width: MediaQuery.of(context).size.width,
               child: PageView(
                   scrollDirection: Axis.horizontal,
@@ -148,44 +148,51 @@ class _ActivityScreenState extends State<ActivityScreen> {
                         ),
                       ],
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 15.0, vertical: 15.0),
-                          child: Text(
-                            'Lagi Berjalan',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.black,
-                                fontFamily: 'Sanomat Grab Web',
-                                fontWeight: FontWeight.w700),
-                          ),
+                    Container(
+                      height: MediaQuery.of(context).size.height,
+                      child: SingleChildScrollView(
+                        physics: BouncingScrollPhysics(),
+                        scrollDirection: Axis.vertical,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15.0, vertical: 15.0),
+                              child: Text(
+                                'Lagi Berjalan',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black,
+                                    fontFamily: 'Sanomat Grab Web',
+                                    fontWeight: FontWeight.w700),
+                              ),
+                            ),
+                            ExpansionTileItem(
+                              title: "Dijadwalkan",
+                            ),
+                            ExpansionTileItem(
+                              title: "Lagi ke pengiriman",
+                            ),
+                            ExpansionTileItem(
+                              title: "Barang sudah di ambil",
+                            ),
+                            ExpansionTileItem(
+                              title: "Lagi ke penerima",
+                            ),
+                            SizedBox(
+                              height: 10,
+                              child: Container(
+                                color: Colors.grey[200],
+                              ),
+                            ),
+                            ExpansionTileItem(
+                              title: "Yang Sudah Lewat",
+                              isBold: true,
+                            )
+                          ],
                         ),
-                        ExpansionTileItem(
-                          title: "Dijadwalkan",
-                        ),
-                        ExpansionTileItem(
-                          title: "Lagi ke pengiriman",
-                        ),
-                        ExpansionTileItem(
-                          title: "Barang sudah di ambil",
-                        ),
-                        ExpansionTileItem(
-                          title: "Lagi ke penerima",
-                        ),
-                        SizedBox(
-                          height: 10,
-                          child: Container(
-                            color: Colors.grey[200],
-                          ),
-                        ),
-                        ExpansionTileItem(
-                          title: "Yang Sudah Lewat",
-                          isBold: true,
-                        )
-                      ],
+                      ),
                     ),
                   ]),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:grab_clone/screens/bottom_navigation/main_screen.dart';
 import 'package:grab_clone/screens/login_screen.dart';
 import 'package:grab_clone/screens/splash_screen.dart';
@@ -9,6 +10,8 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
     return MaterialApp(
       title: 'Grab Clone',
       theme: ThemeData(
