@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:grab_clone/constant.dart';
 import 'package:grab_clone/screens/bottom_navigation/activity_screen.dart';
 import 'package:grab_clone/screens/bottom_navigation/home_screen.dart';
+import 'package:grab_clone/screens/bottom_navigation/inbox_screen.dart';
 import 'package:grab_clone/screens/bottom_navigation/payment_screen.dart';
 import 'package:grab_clone/widgets/grab_bottom_navigation_item.dart';
 
@@ -21,9 +22,7 @@ class _MainScreenState extends State<MainScreen> {
     HomeScreen(),
     ActivityScreen(),
     PaymentScreen(),
-    SafeArea(
-      child: Text("Inbox"),
-    ),
+    InboxScreen(),
     SafeArea(
       child: Text("Account"),
     ),
