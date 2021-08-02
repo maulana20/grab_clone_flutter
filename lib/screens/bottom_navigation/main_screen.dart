@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:grab_clone/constant.dart';
+import 'package:grab_clone/screens/bottom_navigation/account_screen.dart';
 import 'package:grab_clone/screens/bottom_navigation/activity_screen.dart';
 import 'package:grab_clone/screens/bottom_navigation/home_screen.dart';
 import 'package:grab_clone/screens/bottom_navigation/inbox_screen.dart';
@@ -23,9 +24,7 @@ class _MainScreenState extends State<MainScreen> {
     ActivityScreen(),
     PaymentScreen(),
     InboxScreen(),
-    SafeArea(
-      child: Text("Account"),
-    ),
+    AccountScreen()
   ];
 
   bool _isVisible = true;
